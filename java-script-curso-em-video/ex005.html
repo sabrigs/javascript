@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First steps with DOM</title>
+    <style>
+        body {
+            background-color: lightgoldenrodyellow;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        main {
+            width: 500px;
+            margin-inline: auto;
+            margin-top: 56px;
+            border: 1px dashed lightpink;
+            border-radius: 16px;
+            padding: 16px;
+        }
+
+        .highlight {
+            font-size: 1.5em;
+            text-align: center;
+            background-color: lightpink;
+            font-weight: bolder;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>I'm a file test!</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, consequatur a? Amet tempore deserunt quidem eum nulla magnam quo incidunt dolorum? Ad quae autem molestiae minus deleniti! Tempore, ipsa labore!</p>
+        <p class="highlight">I'm changing...</p>
+    </main>
+    <script>
+        // Identifico o elemento
+        const button = window.document.querySelector("p.highlight");
+        // Aplico alterações na variável
+        button.style.color = "white";
+        button.style.background = "black";
+    </script>
+</body>
+</html>
