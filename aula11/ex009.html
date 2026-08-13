@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de multas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p.inline {
+            display: inline;
+        }
+
+        input#velocity {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    <p class="inline">Velocidade do carro</p>
+    <input type="number" name="velocity" id="velocity" value="0">
+    <p class="inline">Km/h</p>
+    <input type="button" value="Verificar" id="buttonVerify">
+    <div id="result">
+
+    </div>
+
+    <script>
+        const buttonVerify = window.document.querySelector("input#buttonVerify");
+        buttonVerify.addEventListener("click", clicar)
+
+        const result = window.document.querySelector("div#result");
+        const velocity = window.document.querySelector("input#velocity");
+
+        function clicar() {
+            const vel = Number(velocity.value);
+            result.innerHTML = `<p>Sua velocidade é de <strong>${vel}</strong>.</p>`;
+            if (vel > 60) {
+                result.innerHTML += `<p>Você foi <strong>multado</strong>! Sua velocidade estava acima do permitido.</p>`
+            }
+            result.innerHTML += `<p>Dirija sempre com cinto de segurança.</p>`
+        }
+    </script>
+</body>
+</html>
