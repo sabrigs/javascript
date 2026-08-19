@@ -1,4 +1,7 @@
 class Abajur {
+    #intensidade;
+    #lampada;
+
     constructor() {
         this.#intensidade = 0;
         this.#lampada = false;
@@ -30,9 +33,16 @@ class Abajur {
     mostrar_status() {
         console.log(`Intensidade: ${this.#intensidade} / Lamapda: ${this.#lampada}`);
     }
+
+    acoes() {
+        this.#controla_intensidade();
+        this.#liga_desliga_lampada();
+    }
 }
 
-const abajur = new Abajur();
-
-abajur.tocar_botão(0);
-abajur.mostrar_status();
+const abajur1 = new Abajur();
+abajur1.tocar_botao
+while (abajur1.tocar_botao() == true) {
+    abajur1.acoes();
+    abajur1.mostrar_status();
+}
